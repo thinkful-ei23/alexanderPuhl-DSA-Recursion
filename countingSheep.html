@@ -1,0 +1,14 @@
+<script>
+
+function countSheep(num) {
+  //Base case
+  if (num === 0) {
+    return
+  }
+  console.log(`${num} - Another sheep jumps over the fence`);
+  return countSheep(num - 1);
+}
+
+countSheep(5);
+
+</script>

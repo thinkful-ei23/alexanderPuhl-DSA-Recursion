@@ -1,0 +1,16 @@
+<script>
+  
+  function nthTriangleNumber(number) {
+    //Base case
+    if (number === 0) {
+      return number;
+    }
+    return number + nthTriangleNumber(number - 1);
+  }
+  
+  const number = 5;
+
+  console.log(nthTriangleNumber(number));
+  
+</script>
+  

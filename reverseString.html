@@ -1,0 +1,16 @@
+<script>
+
+  function reverseString(string) {
+    //Base case
+    if (string === "") {
+      return ""
+    }
+    return string.slice(-1) + reverseString(string.slice(0, -1));
+  }
+  
+  const string = 'hello';
+
+  console.log(reverseString(string));
+  
+  </script>
+  
