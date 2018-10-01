@@ -1,21 +1,24 @@
 <script>
-  
-  function stringSplitter(string, seperator) {
-    //Base case
-    if (string === '') {
-      return '';
-    }
-    let firstCharacter = string.slice(0,1);
-    if(firstCharacter === seperator) {
-      return " " + stringSplitter(string.slice(1), seperator)
-    }
-    return string.slice(0, 1) + stringSplitter(string.slice(1), seperator);
+'use strict';
+function stringSplitter(string, seperator) {
+  //Base case
+  if (string === "") {
+    return "";
   }
-  
-  const string = 'Hello-World';
-  const seperator = '-';
+  let firstCharacter = string.slice(0, 1);
+  if (firstCharacter === seperator) {
+    return " " + stringSplitter(string.slice(1), seperator);
+  }
+  return string.slice(0, 1) + stringSplitter(string.slice(1), seperator);
+}
 
-  console.log(stringSplitter(string, seperator));
-  
+const string = "Hello-World-for-the-win!";
+const seperator = "-";
+
+
+console.log('string is: ', string);
+console.log('Seperator is: ', seperator);
+console.log(stringSplitter(string, seperator));
+
+
 </script>
-  
